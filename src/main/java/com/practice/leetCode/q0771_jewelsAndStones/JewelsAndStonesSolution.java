@@ -1,4 +1,4 @@
-package com.practice.leetCode.jewelsAndStones;
+package com.practice.leetCode.q0771_jewelsAndStones;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,6 +1,6 @@
 package com.practice.leetCode;
 
-import com.practice.leetCode.jewelsAndStones.JewelsAndStonesSolution;
+import com.practice.leetCode.q0771_jewelsAndStones.JewelsAndStonesSolution;
 import org.junit.Assert;
 import org.junit.Test;
 

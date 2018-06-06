@@ -1,7 +1,7 @@
 package com.practice.leetCode;
 
 
-import com.practice.leetCode.twoSum.TwoSumSolution;
+import com.practice.leetCode.q0001_twoSum.TwoSumSolution;
 import org.junit.Assert;
 import org.junit.Test;
 
