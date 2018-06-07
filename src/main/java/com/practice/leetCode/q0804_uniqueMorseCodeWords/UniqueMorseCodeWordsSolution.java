@@ -1,5 +1,8 @@
 package com.practice.leetCode.q0804_uniqueMorseCodeWords;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * 英文字母转换成摩斯码,找出相同的摩斯码个数.
  * Question:
@@ -32,14 +35,39 @@ package com.practice.leetCode.q0804_uniqueMorseCodeWords;
  */
 public class UniqueMorseCodeWordsSolution {
 
+    /**
+     *   获取ascii码 映射到数组,并且循环
+     * @author bruce.sun
+     * @date 2018/6/7
+     * @param
+     * @return
+     *
+     */
     public int solution1(String[] words) {
         int result = 0;
         if (words == null) {
             return result;
         }
 
+        String[] morseCode=new String[]{".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+        Set set=new HashSet();
+        for(String s:words){
+            char[] charArray=s.toLowerCase().toCharArray();
+            StringBuffer sb=new StringBuffer();
+            for(char c:charArray){
+                int cur = Integer.valueOf(c);
+                int startA = Integer.valueOf('a');
+                int index=cur-startA;
+                sb.append(morseCode[index]);
+            }
+            System.out.println("---------");
+            System.out.println(sb.toString());
+            set.add(sb.toString());
+        }
+        result=set.size();
         return result;
     }
 
 
 }
+
